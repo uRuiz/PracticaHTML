@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 	<head>	
-		<title>Batman</title>
+		<title>Formulario de contacto</title>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 		<link rel="stylesheet" href="css/grid.css" type="text/css">	
@@ -13,19 +13,22 @@
 
 		<nav class="navbar">
 			<ul class="navbar-list">
-				<li class="navbar-item">
+				<li class="navbar-item active">
 					<a href="index.html">Inicio</a>
 				</li>
 				<li class="navbar-item">
-					<a href="index.html">Quien soy</a>
+					<a href="index.html#quien-soy">Quien soy</a>
 				</li>
 				<li class="navbar-item">
-					<a href="index.html">Equipo</a>
+					<a href="index.html#estudios">Estudios</a>
 				</li>
 				<li class="navbar-item">
-					<a href="index.html">Transporte</a>
+					<a href="index.html#experiencia">Experiencia</a>
 				</li>
-				<li class="navbar-item active">
+				<li class="navbar-item">
+					<a href="index.html#sobre-mi">Sobre mi</a>
+				</li>
+				<li class="navbar-item">
 					<a href="contact.html">Contacto</a>
 				</li>
 			</ul>
@@ -42,8 +45,8 @@
 	                        function initMap() {
 	                       		var mapDiv = document.getElementById('map');
 	                       		var map = new google.maps.Map(mapDiv, {
-	                            center: {lat: 42.762480, lng: -83.283406},
-	                            zoom: 16
+	                            center: {lat: 40.417271, lng: -3.684164},
+	                            zoom: 12
 	                           });
 	                        }
                    		</script>
@@ -93,49 +96,12 @@
 						</div>	
 
 						<div class="form-row">
-							<label for="fecha">Fecha de la misión</label>
-							<input type="date" name="fecha" id="fecha" min="2016-06-20" required>
-						</div>
-
-						<div class="form-row">
 							<button type="submit" id="enviar">Enviar</button>
 						</div>
 					</form>
 				</div>			
 			</section>
-
-			<section class="section-container">
-				<table>
-
-					<thead>
-						<tr>
-							<th>Tipo de servicio</th>
-							<th>Precio</th>
-						</tr>
-					</thead>
-
-					<tbody>
-						<tr>
-							<td>Consulta</td>
-							<td>100 €</td>
-						</tr>
-						<tr>
-							<td>Misión simple</td>
-							<td>500 €</td>
-						</tr>
-						<tr>
-							<td>Rescate</td>
-							<td>1.000 €</td>
-						</tr>
-						<tr>
-							<td>Salvar Gotham</td>
-							<td>15.000 €</td>
-						</tr>
-					</tbody>
-				
-				</table>
-			</section>
-
+			
 		</div>
 
 		<footer class="footer">
@@ -144,5 +110,5 @@
 
 	</body>
 	<script src="js/form.js"></script>
-
+	
 </html>

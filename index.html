@@ -2,40 +2,89 @@
 <html lang="es">
 
 	<head>	
+		<title>Página personal de Urko Ruiz</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="css/style.css"/> 
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/grid.css"/>  
 		<script src="js/javascript.js"></script>
 	</head>
 	
 	<body>
-	
-		<header class="header">
-			<h1 class="title">Urko Ruiz</h1>
-			<p class="title-cite">Página de presentación de:</p>
-			<div class="title-img">				
+		
+			<header class="header">
+				<h1 class="title">Urko Ruiz</h1>
+				<p class="title-cite">Página personal de:</p>
+				<div class="title-img">				
+				</div>
+			</header>
+
+			<nav class="navbar">
+				<ul class="navbar-list">
+					<li class="navbar-item active">
+						<a href="#">Inicio</a>
+					</li>
+					<li class="navbar-item">
+						<a href="#quien-soy">Quien soy</a>
+					</li>
+					<li class="navbar-item">
+						<a href="#estudios">Estudios</a>
+					</li>
+					<li class="navbar-item">
+						<a href="#experiencia">Experiencia</a>
+					</li>
+					<li class="navbar-item">
+						<a href="#sobre-mi">Sobre mi</a>
+					</li>
+					<li class="navbar-item">
+						<a href="contact.html">Contacto</a>
+					</li>
+				</ul>
+			</nav>
+			
+		<div class="container">
+
+			<div class="container">
+				<section id="quien-soy" class="about-me clearfix section-container">
+					<h2>Quien soy</h2>
+					<div class="col-6">
+						<article>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum corporis minima facilis accusamus! Repellendus debitis aliquam quod distinctio itaque omnis error facilis, quis eaque tenetur. Quas provident tempore sapiente recusandae.
+						</article>						
+					</div>
+
+					<div class="col-6">
+						<article>
+							<figure>
+								<img src="https://www.gravatar.com/avatar/c5459bb35611d80976c912308d217cca?s=200"/>
+								<figcaption>
+									Urko Ruiz
+								</figcaption>
+							</figure>
+							
+						</article>
+						
+					</div>
+				</section>
+
+				<section id="estudios" class="clearfix">
+					
+				</section>
+
+				<section id="experiencia"  class="clearfix">
+					
+				</section>
+
+				<section id="sobre-mi" class="clearfix">
+					<article class="video">
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/7cHJMisoxmA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					</article>
+				</section>
+					
 			</div>
-		</header>
-
-		<nav class="navbar">
-			<ul class="navbar-list">
-				<li class="navbar-item active">
-					<a href="#">Inicio</a>
-				</li>
-				<li class="navbar-item">
-					<a href="#quien-soy">Quien soy</a>
-				</li>
-				<li class="navbar-item">
-					<a href="#equipo">Equipo</a>
-				</li>
-				<li class="navbar-item">
-					<a href="#transporte">Transporte</a>
-				</li>
-				<li class="navbar-item">
-					<a href="contact.html">Contacto</a>
-				</li>
-			</ul>
-		</nav>
-
+		</div>
+		<footer>
+			Urko Ruiz &copy; 2016 KeepCoding.io
+		</footer>
 	</body>
 
 </html>
