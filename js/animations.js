@@ -1,19 +1,3 @@
-function move() {
-  var elem = document.getElementById("mi-barra");
-  var width = 10;
-  var id = setInterval(frame, 10);
-  function frame() {
-    if (width >= 100) {
-      clearInterval(id);
-    } else {
-      width++;
-      elem.style.width = width + '%';
-      document.getElementById("label").innerHTML = width * 1  + '%';
-    }
-  }
-}
-
-
 // Returns true if the specified element has been scrolled into the viewport.
 function isElementInViewport(elem) {
     var $elem = $(elem);
@@ -32,7 +16,7 @@ function isElementInViewport(elem) {
 
 // Check if it's time to start the animation.
 function checkAnimation() {
-    var $elem = $('#conocimientos');
+    var $elem = $('.mi-barra');
 
     if (isElementInViewport($elem)) {
         // Start the animation

@@ -6,7 +6,7 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 		<link rel="stylesheet" type="text/css" href="css/grid.css"/>  
-		<script src="js/javascript.js"></script>
+		<script src="js/jquery-3.0.0.js"></script>
 	</head>
 	
 	<body>
@@ -47,7 +47,7 @@
 		<div class="container">
 
 			<div class="container">
-				<section id="quien-soy" class="about-me clearfix section-container">
+				<section id="quien-soy" class="clearfix section-container">
 					<h2 class="encabezamientos">Quien soy</h2>
 					<div class="col-6">						
 						<article class="informacion-quien-soy">
@@ -96,41 +96,41 @@
 					</div>
 				</section>
 				
-				<section id="conocimientos" class="clearfix section-container">
+				<section id="conocimientos" class="clearfix section-container" onscroll="checkAnimation">
 					<h2 class="encabezamientos">Conocimientos</h2>
 					HTML5
 					<div id="barra-progreso">
-						<div id="mi-barra">							
-							<div id="label">0%</div>
+						<div class="mi-barra">							
+							<div id="label"></div>
 						</div>						
 					</div>
 					CSS3
 					<div id="barra-progreso">
-						<div id="mi-barra">							
-							<div id="label">0%</div>
+						<div class="mi-barra">							
+							<div id="label"></div>
 						</div>						
 					</div>
 					JAVASCRIPT
 					<div id="barra-progreso">
-						<div id="mi-barra">							
-							<div id="label">0%</div>
+						<div class="mi-barra">							
+							<div id="label"></div>
 						</div>						
 					</div>
 					JAVA
 					<div id="barra-progreso">
-						<div id="mi-barra">							
-							<div id="label">0%</div>
+						<div class="mi-barra">							
+							<div id="label"></div>
 						</div>						
 					</div>
 					PHP
 					<div id="barra-progreso">
-						<div id="mi-barra">							
-							<div id="label">0%</div>
+						<div class="mi-barra">							
+							<div id="label"></div>
 						</div>						
 					</div>
 					GIT
 					<div id="barra-progreso">
-						<div id="mi-barra">							
+						<div class="mi-barra">							
 							<div id="label">0%</div>
 						</div>						
 					</div>
@@ -140,39 +140,45 @@
 				<section id="experiencia"  class="clearfix section-container">
 					<h2 class="encabezamientos">Experiencia laboral</h2>
 					<article class="bloque-articulo polaroid">
-						<figure class="sombra-polaroid" id="polaroid1">
-							<img src="img/Logo-Frikitek.png"/>
-							<figcaption>
-								<span class="texto-experiencia">Frikitek</span>
-								<br/>
-								<span class="periodo">2016</span>
-							</figcaption>
-						</figure>
-
-						<figure class="sombra-polaroid" id="polaroid2">
-							<img src="img/game.jpg"/>
-							<figcaption>
-								<span class="texto-experiencia">Game</span>
-								<br/>
-								<span class="periodo">2010-2015</span>	
-							</figcaption>
-						</figure>
-
-						<figure class="sombra-polaroid" id="polaroid3">
-							<img src="img/pernod-ricard-logo.jpg"/>
-							<figcaption>
-								<span class="texto-experiencia">Pernod Ricard</span>
-								<br/>
-								<span class="periodo">2008-2010</span>
-							</figcaption>
-						</figure>
+						<div class="col-4">
+							<figure class="sombra-polaroid" id="polaroid1">
+								<img src="img/Logo-Frikitek.png"/>
+								<figcaption>
+									<span class="texto-experiencia">Frikitek</span>
+									<br/>
+									<span class="periodo">2016</span>
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-4">
+							<figure class="sombra-polaroid" id="polaroid2">
+								<img src="img/game.jpg"/>
+								<figcaption>
+									<span class="texto-experiencia">Game</span>
+									<br/>
+									<span class="periodo">2010-2015</span>	
+								</figcaption>
+							</figure>
+						</div>
+						<div class="col-4">
+							<figure class="sombra-polaroid" id="polaroid3">
+								<img src="img/pernod-ricard-logo.jpg"/>
+								<figcaption>
+									<span class="texto-experiencia">Pernod Ricard</span>
+									<br/>
+									<span class="periodo">2008-2010</span>
+								</figcaption>
+							</figure>
+						</div>
 					</article>	
 				</section>
 
 				<section id="sobre-mi" class="clearfix section-container">
 					<h2 class="encabezamientos">Sobre mi</h2>
-					<article class="video bloque-articulo">
-						<iframe width="100%" height="500" src="https://www.youtube.com/embed/7cHJMisoxmA?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+					<article class="bloque-articulo">
+						<video  width="550" height="300" controls>
+							<source src="video/vuelta-getxo.mp4" type="video/mp4">
+						</video>
 					</article>
 				</section>
 
@@ -247,6 +253,6 @@
 			Urko Ruiz &copy; 2016 C.V.
 		</footer>
 	</body>
-	<script src="js/form.js"></script>
-	<script src="js/animations.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/animations.js""></script>
 </html>

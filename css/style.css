@@ -142,26 +142,14 @@ body {
 }
 
 
-.polaroid{
-	height:540px;
-	width:100%;	
-	background-color: #FF5619;
-	background: rgba(248,80,50,1);
-	background: rgba(248,80,50,1);
-	background: -moz-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 24%, rgba(255,86,25,1) 49%, rgba(246,41,12,1) 73%, rgba(240,47,23,1) 92%, rgba(240,47,23,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(248,80,50,1)), color-stop(24%, rgba(241,111,92,1)), color-stop(49%, rgba(255,86,25,1)), color-stop(73%, rgba(246,41,12,1)), color-stop(92%, rgba(240,47,23,1)), color-stop(100%, rgba(240,47,23,1)));
-	background: -webkit-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 24%, rgba(255,86,25,1) 49%, rgba(246,41,12,1) 73%, rgba(240,47,23,1) 92%, rgba(240,47,23,1) 100%);
-	background: -o-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 24%, rgba(255,86,25,1) 49%, rgba(246,41,12,1) 73%, rgba(240,47,23,1) 92%, rgba(240,47,23,1) 100%);
-	background: -ms-linear-gradient(left, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 24%, rgba(255,86,25,1) 49%, rgba(246,41,12,1) 73%, rgba(240,47,23,1) 92%, rgba(240,47,23,1) 100%);
-	background: linear-gradient(to right, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 24%, rgba(255,86,25,1) 49%, rgba(246,41,12,1) 73%, rgba(240,47,23,1) 92%, rgba(240,47,23,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#f02f17', GradientType=1 );
+.polaroid{	
+	width:100%;		
 }
 
 .polaroid figure{
 	text-align:center;
 	width:320px;
 	height: 300px;
-	float: left;
 	margin-left:6%;
 	margin-top:10%;	
 	background-color: #fff;
@@ -190,10 +178,16 @@ body {
 
 #polaroid1{
 	transform: rotate(-6deg);
+	margin: 0 auto;
+}
+
+#polaroid2{
+	margin: 0 auto;
 }
 
 #polaroid3{
 	transform: rotate(6deg);
+	margin: 0 auto;
 }
 
 #polaroid1:hover{
@@ -258,6 +252,42 @@ figcaption {
   color: white;
 }
 
+#barra-progreso {
+ 	width: 100%;
+    height: 40px;
+    background-color: #eee;
+    padding: 2px;
+    margin: .6em 0;
+    border: 1px #000 double;
+    clear: both;
+}
+
+.mi-barra {
+	background: #A1C969; /*-- Color of the bar --*/
+    height: 30px;
+    width: 0%;
+    max-width: 100%;
+    float: left;
+}
+
+.mi-barra.start{
+	-webkit-animation: progress 2s 1 forwards;
+    -moz-animation: progress 2s 1 forwards;
+    -ms-animation: progress 2s 1 forwards;
+    animation: progress 2s 1 forwards;
+}
+
+#label{
+	height: 30px;
+    width: 100%;
+    overflow: hidden;
+    -moz-opacity: 0.25;
+    -khtml-opacity: 0.25;
+    opacity: 0.25;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+    filter: alpha(opacity=25);
+}
 
 
 /* KEYFRAMES  */ 
@@ -277,3 +307,26 @@ figcaption {
 	to {transform:rotate(0deg) scale(1.2,1.2)}
 }
 
+@-webkit-keyframes progress { 
+    from { }
+
+    to { width: 66% }
+}
+
+@-moz-keyframes progress { 
+    from { }
+
+    to { width: 66% }
+}
+
+@-ms-keyframes progress { 
+    from { }
+
+    to { width: 66% }
+}
+
+@keyframes progress { 
+    from { }
+
+    to { width: 66% }
+}
