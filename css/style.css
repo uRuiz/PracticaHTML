@@ -9,6 +9,12 @@ body {
 	overflow-x: hidden;
 }
 
+@font-face {
+	font-family: coburn;
+	src: url(../font/Coburn.ttf);
+}
+
+
 .navbar {
 	position: fixed;
 	background-color: #F7F7F7;
@@ -71,6 +77,8 @@ body {
 	text-align: center;
 	font-size: 100px;
 	line-height: 135px;
+	font-family: coburn;
+	animation: mostrarTitulo 6s linear;
 }
 
 .title-cite {
@@ -127,7 +135,7 @@ body {
 }
 
 #estudios, #experiencia, #contacto {
-	background-color: #000;
+	background-color:rgba(0, 0, 0, 0.92);
 	color: #fff;
 	margin-right: calc(-50vw + 50%);
 	margin-left: calc(-50vw + 50%);	
@@ -141,7 +149,9 @@ body {
 	border-radius: 50%;	
 }
 
-
+article.bloque-articulo{
+	text-align: center;
+}
 .polaroid{	
 	width:100%;		
 }
@@ -552,4 +562,28 @@ figcaption {
 @keyframes mover{
 	from {padding-left:0px;}
 	to {padding-left:10em;}
+}
+
+@keyframes mostrarTitulo{
+	0% {opacity: 0; top:0%;}
+	50% {opacity: 0.2;top:33%;}
+	100% {opacity: 1; top:65%}
+}
+
+@-webkit-keyframes{
+	0% {opacity: 0; top:0%;}
+	50% {opacity: 0.2;top:33%;}
+	100% {opacity: 1; top:65%}
+}
+
+@-moz-keyframes{
+	0% {opacity: 0; top:0%;}
+	50% {opacity: 0.2;top:33%;}
+	100% {opacity: 1; top:65%}
+}
+
+@-ms-keyframes{
+	0% {opacity: 0; top:0%;}
+	50% {opacity: 0.2;top:33%;}
+	100% {opacity: 1; top:65%}
 }

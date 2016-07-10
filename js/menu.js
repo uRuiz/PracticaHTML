@@ -5,7 +5,13 @@ for (var i = 0; i < navbarItems.length; i++){
 	navbarItems[i].addEventListener('click', function(evt){	
 
 		deleteActiveClass();
-		this.classList.add('active');
+
+		if (Modernizr.classList){
+			this.classList.add('active');
+		} else{
+			this.className += ' active';
+		}
+		
 
 		var sectionToGo = this.getElementsByTagName('a')[0].href.split('#');
 		
@@ -79,7 +85,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href="#"]').parentNode.classList.add('active');
+		if (Modernizr.classList) {
+			document.querySelector('a[href="#"]').parentNode.classList.add('active');
+		} else {
+			document.querySelector('a[href="#"]').parentNode.className += ' active';
+		}
+		
 	} else if (window.pageYOffset >= offsetQuienSoy && window.pageYOffset < offsetEstudios) {
 		if (!previous) {
 			previous = 2;
@@ -88,7 +99,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#A4A4A4';
 		deleteActiveClass();
-		document.querySelector('a[href$="quien-soy"]').parentNode.classList.add('active-reverse');
+		if (Modernizr.classList) {
+			document.querySelector('a[href$="quien-soy"]').parentNode.classList.add('active-reverse');	
+		} else {
+			document.querySelector('a[href$="quien-soy"]').parentNode.className += ' active-reverse';	
+		}
+		
 	} else if (window.pageYOffset >= offsetEstudios && window.pageYOffset < offsetConocimientos){
 		if (!previous) {
 			previous = 3;
@@ -97,7 +113,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href$="estudios"]').parentNode.classList.add('active');
+		if (Modernizr.classList) {
+			document.querySelector('a[href$="estudios"]').parentNode.classList.add('active');	
+		} else{
+			document.querySelector('a[href$="estudios"]').parentNode.className += ' active';
+		}
+		
 	} else if (window.pageYOffset >= offsetConocimientos && window.pageYOffset < offsetExperiencia){
 		if (!previous) {
 			previous = 4;
@@ -106,7 +127,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#A4A4A4';
 		deleteActiveClass();
-		document.querySelector('a[href$="conocimientos"]').parentNode.classList.add('active-reverse');
+		if (Modernizr.classList){
+			document.querySelector('a[href$="conocimientos"]').parentNode.classList.add('active-reverse');
+		} else {
+			document.querySelector('a[href$="conocimientos"]').parentNode.className += ' active-reverse';
+		}
+		
 	} else if (window.pageYOffset >= offsetExperiencia && window.pageYOffset < offsetSobreMi){
 		if (!previous) {
 			previous = 5;
@@ -115,7 +141,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href$="experiencia"]').parentNode.classList.add('active');
+		if (Modernizr.classList){
+			document.querySelector('a[href$="experiencia"]').parentNode.classList.add('active');
+		} else {
+			document.querySelector('a[href$="experiencia"]').parentNode.className += ' active';
+		}
+		
 	} else if (window.pageYOffset >= offsetSobreMi && window.pageYOffset < offsetContacto){
 		if (!previous) {
 			previous = 6;
@@ -124,7 +155,12 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#A4A4A4';
 		deleteActiveClass();
-		document.querySelector('a[href$="sobre-mi"]').parentNode.classList.add('active-reverse');
+		if (Modernizr.classList){
+			document.querySelector('a[href$="sobre-mi"]').parentNode.classList.add('active-reverse');	
+		} else {
+			document.querySelector('a[href$="sobre-mi"]').parentNode.className +=' active-reverse';
+		}
+		
 	} else {
 		if (!previous) {
 			previous = 7;
@@ -133,13 +169,23 @@ function changeMenuStyle(evt){
 		}
 		navbar.style.backgroundColor = '#F7F7F7';
 		deleteActiveClass();
-		document.querySelector('a[href$="contacto"]').parentNode.classList.add('active');
+		if (Modernizr.classList){
+			document.querySelector('a[href$="contacto"]').parentNode.classList.add('active');
+		} else {
+			document.querySelector('a[href$="contacto"]').parentNode.className +=' active';
+		}
+		
 	}
 }
 
 function deleteActiveClass() {
 	for (var i = 0; i < navbarItems.length; i++) {
-		navbarItems[i].classList.remove('active');
-		navbarItems[i].classList.remove('active-reverse');
+		if (Modernizr.classList) {
+			navbarItems[i].classList.remove('active');
+			navbarItems[i].classList.remove('active-reverse');
+		} else {
+			navbarItems[i].className = 'navbar-item';
+		}
+		
 	}
 }

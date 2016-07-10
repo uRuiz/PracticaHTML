@@ -67,3 +67,50 @@ function checkAnimation() {
 $(window).scroll(function(){
     checkAnimation();
 });
+
+
+if(!Modernizr.cssanimation){
+    $(function() {
+        $('#menu1').hover(function(){
+            $(this).animate({padding:'0px 200px'},{queue:false,duration:1000});
+        }, function() {
+            $(this).animate({padding:'0px 0px'},{queue:false,duration:500});
+        });
+
+        $('#menu2').hover(function(){
+            $(this).animate({padding:'0px 200px'},{queue:false,duration:1000});
+        }, function() {
+            $(this).animate({padding:'0px 0px'},{queue:false,duration:500});
+        });
+
+        $('#menu3').hover(function(){
+            $(this).animate({padding:'0px 200px'},{queue:false,duration:1000});
+        }, function() {
+            $(this).animate({padding:'0px 0px'},{queue:false,duration:500});
+        });
+
+        $(function(){
+            $('.mi-barra-html').animate({width:'75%'},{queue:false,duration:3000});
+        });
+
+        $(function(){
+            $('.mi-barra-css').animate({width:'66%'},{queue:false,duration:3000});
+        });
+
+        $(function(){
+            $('.mi-barra-js').animate({width:'60%'},{queue:false,duration:3000});
+        });
+
+        $(function(){
+            $('.mi-barra-java').animate({width:'55%'},{queue:false,duration:3000});
+        });
+
+        $(function(){
+            $('.mi-barra-php').animate({width:'65%'},{queue:false,duration:3000});
+        });
+
+        $(function(){
+            $('.mi-barra-git').animate({width:'80%'},{queue:false,duration:3000});
+        });
+    });
+}
